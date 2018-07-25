@@ -1,0 +1,22 @@
+{
+  "name": "HWCore",
+  "version": "0.1.0",
+  "summary": "A short description of HWCore.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/oweimeio/HWCore",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "oweimeio": "huwei@yuntongxun.com"
+  },
+  "source": {
+    "git": "https://github.com/oweimeio/HWCore.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HWCore/Classes/**/*"
+}
