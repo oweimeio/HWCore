@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HWCore_Example' do
+  pod 'HWCore', :path => '../'
+
+  target 'HWCore_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
