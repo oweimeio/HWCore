@@ -18,5 +18,7 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "HWCore/Classes/**/*"
+  "source_files": "HWCore/Classes/**/*",
+  "vendored_libraries": "HWCore/libTest.{a}",
+  "public_header_files": "Pod/Classes/**/*.h"
 }

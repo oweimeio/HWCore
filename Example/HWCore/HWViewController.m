@@ -7,6 +7,7 @@
 //
 
 #import "HWViewController.h"
+#import <HWCore/PreHeader.h>
 
 @interface HWViewController ()
 
@@ -18,6 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+//    Goods *g = [Goods new];
+//    [g show];
 }
 
 - (void)didReceiveMemoryWarning
