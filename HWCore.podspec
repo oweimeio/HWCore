@@ -36,7 +36,7 @@ TODO: Add long description of the pod here.
   #   'HWCore' => ['HWCore/Assets/*.png']
   # }
 
-   s.public_header_files = 'Pod/Classes/**/*.h'
+   s.public_header_files = 'HWCore/Classes/**/*.h'
   #s.libraries  = 'lib122.a'
   # s.frameworks = 'lib122.a'
 #  s.dependency 'WechatOpenSDK'

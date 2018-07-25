@@ -1,5 +1,5 @@
 PODS:
-  - HWCore (0.1.0)
+  - HWCore (0.1.1)
 
 DEPENDENCIES:
   - HWCore (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HWCore: ae291623319d66e9632ca3dd5d9a3844fb454d41
+  HWCore: 441ac10d0647b796f3f0fd138fee4e7e54a9fecf
 
 PODFILE CHECKSUM: 8770ab936497c730ca5eecb3db0047763e081f92
 

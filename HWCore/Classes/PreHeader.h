@@ -8,6 +8,5 @@
 #ifndef PreHeader_h
 #define PreHeader_h
 
-#import <HWCore/TestViewController.h>
 
 #endif /* PreHeader_h */

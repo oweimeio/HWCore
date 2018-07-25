@@ -8,20 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		009B990179A9EA08318CD74DA07F6E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		09DDCFDD1CB1779A4EF17CF7364E279C /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D45BF8EB6B5CA4280F4FBFC5338FDA /* ReplaceMe.m */; };
-		3C4DF951B4C2D4DD2F70BCE2267AFE43 /* _22.h in Headers */ = {isa = PBXBuildFile; fileRef = 7170D12B606F6DB21E8DF968E20DC110 /* _22.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4BBA51D8E9C6EF36306ABA8440ED6344 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA4274ECAD56D745233ED2DB5F7DB8A /* TestViewController.m */; };
-		55ACC224E8EAA442562D66F5E3390F27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		56FF5B7B366A968C6627DF50AA3CC31A /* TestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B1C88478308E897F658ECEDD981AC52 /* TestViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5349BC2E19B1D54B32439E13AB770589 /* PreHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B38E8FF0A9BAC0A940722B4010C2203 /* PreHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D2609021457BC1D9EE0462748B59187 /* Pods-HWCore_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0329B98D8C77DB9F73F02A6FDF7703B6 /* Pods-HWCore_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D7C49A68CED307AC8BE4CDEAE6574C1 /* PreHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 547A2CC0A4F24384971DFFF782AB1906 /* PreHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71353FBB0DC0F4A100E992E6D5883182 /* HWCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2BAFBBF4C126376F8F7F6FDE90092CF /* HWCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71652760C1C01CEA82EEEDF3D6C36C94 /* HWCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A52E389A084D3B8874EF2500DA57E7 /* HWCore-dummy.m */; };
+		70FC53DFBBD9590BE42BFBC4709D22E3 /* Goods.h in Headers */ = {isa = PBXBuildFile; fileRef = 19C852229D9D25B16E94B7EDAAE8CEE2 /* Goods.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7577AAA69F8AFB573E41B17AF7486EE8 /* testPreheader.h in Headers */ = {isa = PBXBuildFile; fileRef = 49F9252141D9E1A62381D5894F483F9F /* testPreheader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C0ABF44376D83C0F507F687F37719BB /* Pods-HWCore_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DF4D21651074480FEA431A6B793B61 /* Pods-HWCore_Tests-dummy.m */; };
 		809627E05E572BE4769C7FF5CC9BE20E /* Pods-HWCore_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 227FDD4BE00CEF2E45DC821E2036024A /* Pods-HWCore_Example-dummy.m */; };
+		87A969DDB2A2DC57D9329B04B9D2F0EA /* HWCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF9DE619B64C5B734DD7AD258C47D8C /* HWCore-dummy.m */; };
 		87C5032A0BF45D0DB35636FD35398501 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		9CEA4C1F44E1C5E837D87F8F9885DA0E /* Goods.h in Headers */ = {isa = PBXBuildFile; fileRef = DFD211273D220492D0C800D5198843D8 /* Goods.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9B03D19D2907539E2567E4EAD2355CD /* testPreheader.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB5443D5B33FAF4136374F956ECC6AF /* testPreheader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A50305CD44DEAFFDDF64FC8061A35D11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		AB0F7A50789EB698F8B61402C9C62E11 /* HWCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F70372E416B21C51C8B5AAB2A72B0D /* HWCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDBFDA93191DD75469009854D6EF49AC /* _22.h in Headers */ = {isa = PBXBuildFile; fileRef = 47C94185483BE27A02538E745B8D0006 /* _22.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9BF63F456C5E0F59609B301FCE95576 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF622048501239B664C285DCD3CF0B6 /* ReplaceMe.m */; };
 		F3DBE81CD566C053AABCD1B01C105ABC /* Pods-HWCore_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB8F124B1CC93A0AD22EB9A81C908AC /* Pods-HWCore_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -37,7 +35,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6B1D747CBF9979E26C89CEF2E7875F91;
+			remoteGlobalIDString = E223481CA8AF92BE4F5DB908B2F898F3;
 			remoteInfo = HWCore;
 		};
 /* End PBXContainerItemProxy section */
@@ -45,46 +43,44 @@
 /* Begin PBXFileReference section */
 		0329B98D8C77DB9F73F02A6FDF7703B6 /* Pods-HWCore_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HWCore_Example-umbrella.h"; sourceTree = "<group>"; };
 		0BCC03CF5CDBF778DBACDFFEF616579F /* Pods-HWCore_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HWCore_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1396D4F1242D3D87740C3680024289E7 /* libTest.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libTest.a; path = HWCore/libTest.a; sourceTree = "<group>"; };
-		197DF13F2019410B0EF525BB66AF66FC /* HWCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = HWCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		141AFC9191718CECFE8B6C1623F451FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		19C852229D9D25B16E94B7EDAAE8CEE2 /* Goods.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Goods.h; path = HWCore/Classes/Goods.h; sourceTree = "<group>"; };
 		217D82770B594AD670D7B949A3E70374 /* Pods-HWCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HWCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		227FDD4BE00CEF2E45DC821E2036024A /* Pods-HWCore_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HWCore_Example-dummy.m"; sourceTree = "<group>"; };
-		2BB5443D5B33FAF4136374F956ECC6AF /* testPreheader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = testPreheader.h; path = HWCore/Classes/testPreheader.h; sourceTree = "<group>"; };
-		31B0E9F17FA9500DC34B3DE28F859175 /* HWCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HWCore.xcconfig; sourceTree = "<group>"; };
-		3819222E19943C1E0E4E00E117DD6FF7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		382E9F902B84079E3814F4AB8D5E0575 /* HWCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HWCore-prefix.pch"; sourceTree = "<group>"; };
+		3B38E8FF0A9BAC0A940722B4010C2203 /* PreHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PreHeader.h; path = HWCore/Classes/PreHeader.h; sourceTree = "<group>"; };
+		3B5964BA130CF3F57DE1AD9109477690 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4639DD679B970864711A3B3A77E9892C /* Pods-HWCore_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HWCore_Example-resources.sh"; sourceTree = "<group>"; };
-		4B1C88478308E897F658ECEDD981AC52 /* TestViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TestViewController.h; path = HWCore/Classes/TestViewController.h; sourceTree = "<group>"; };
+		47C94185483BE27A02538E745B8D0006 /* _22.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _22.h; path = HWCore/Classes/_22.h; sourceTree = "<group>"; };
+		49F9252141D9E1A62381D5894F483F9F /* testPreheader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = testPreheader.h; path = HWCore/Classes/testPreheader.h; sourceTree = "<group>"; };
 		54424EA643675609737D28AA537F83A8 /* Pods-HWCore_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HWCore_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		547A2CC0A4F24384971DFFF782AB1906 /* PreHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PreHeader.h; path = HWCore/Classes/PreHeader.h; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		63D45BF8EB6B5CA4280F4FBFC5338FDA /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = HWCore/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		64E1F403E9FA43135C542474C39CFD10 /* Pods_HWCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HWCore_Example.framework; path = "Pods-HWCore_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C79A236652F6776007903855558E673 /* Pods_HWCore_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HWCore_Tests.framework; path = "Pods-HWCore_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D984B2BC729C1511C9136EA5936B260 /* HWCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HWCore.framework; path = HWCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7170D12B606F6DB21E8DF968E20DC110 /* _22.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _22.h; path = HWCore/Classes/_22.h; sourceTree = "<group>"; };
-		87A2379DA00B4FBD516EFDD9FA4BC009 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		880B095E1EBCA7A1FDD6D6831B2292A1 /* HWCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = HWCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8FEC41DE15139209648CA3217E813D4A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DF9DE619B64C5B734DD7AD258C47D8C /* HWCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HWCore-dummy.m"; sourceTree = "<group>"; };
 		AAF9B34FA4BCBFD1D7D1A25B655948CC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C57D576CCB9F399B3C626B9235FC7C51 /* HWCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HWCore.modulemap; sourceTree = "<group>"; };
+		BA8E972E17CB75D2967083649EB33B47 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		BB8BA83816A32CAA7BC26BECBEC1CD2E /* HWCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HWCore.xcconfig; sourceTree = "<group>"; };
+		C7A95A60A23E4B9B065E168C79B97E4F /* HWCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HWCore.modulemap; sourceTree = "<group>"; };
 		CB14829FAA9088A047A6CA220A8724DA /* Pods-HWCore_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HWCore_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		CCBDE476665D2B34543B349DE8B8B520 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		CD3844E6E70ADAADB204DB4DF3DF858A /* Pods-HWCore_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HWCore_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CDD5A623395E1DDF073950A55348255F /* Pods-HWCore_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HWCore_Tests-resources.sh"; sourceTree = "<group>"; };
 		CFB8F124B1CC93A0AD22EB9A81C908AC /* Pods-HWCore_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HWCore_Tests-umbrella.h"; sourceTree = "<group>"; };
+		D0E080373D562CC15CB75A0BE7D8925C /* HWCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HWCore-prefix.pch"; sourceTree = "<group>"; };
 		D35CD72DC0F704073159E4519B3A4D70 /* Pods-HWCore_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HWCore_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		D69A9B235580FB179BDA01D5C12229E5 /* Pods-HWCore_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HWCore_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D6F70372E416B21C51C8B5AAB2A72B0D /* HWCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HWCore-umbrella.h"; sourceTree = "<group>"; };
 		DE781A272B2618F1AB6199C252CE8473 /* Pods-HWCore_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HWCore_Example.modulemap"; sourceTree = "<group>"; };
-		DFD211273D220492D0C800D5198843D8 /* Goods.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Goods.h; path = HWCore/Classes/Goods.h; sourceTree = "<group>"; };
-		E0A52E389A084D3B8874EF2500DA57E7 /* HWCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HWCore-dummy.m"; sourceTree = "<group>"; };
-		E2BAFBBF4C126376F8F7F6FDE90092CF /* HWCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HWCore-umbrella.h"; sourceTree = "<group>"; };
+		DF97AB4580FB87D98210A4A14AD2E68C /* libTest.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libTest.a; path = HWCore/libTest.a; sourceTree = "<group>"; };
 		E4F19FC28C1B14A4A822759115394BDF /* Pods-HWCore_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HWCore_Tests.modulemap"; sourceTree = "<group>"; };
+		ECF622048501239B664C285DCD3CF0B6 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = HWCore/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		EF5B0971536E386C761F965C63A2A66C /* Pods-HWCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HWCore_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F5DF4D21651074480FEA431A6B793B61 /* Pods-HWCore_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HWCore_Tests-dummy.m"; sourceTree = "<group>"; };
 		F60663745D74E8E2F5267F501E2CDA00 /* Pods-HWCore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HWCore_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FF775E996BD5EC8DD7C7141AA300B663 /* Pods-HWCore_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HWCore_Example-frameworks.sh"; sourceTree = "<group>"; };
-		FFA4274ECAD56D745233ED2DB5F7DB8A /* TestViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TestViewController.m; path = HWCore/Classes/TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,19 +92,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2063C4579C09FFEECDB62BCB8A9CFD4D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55ACC224E8EAA442562D66F5E3390F27 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D51EB1B8DEC13E1BD9BEAFA6A162221F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				87C5032A0BF45D0DB35636FD35398501 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE46A033BD8B57E695F2AF0116CD7F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50305CD44DEAFFDDF64FC8061A35D11 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,22 +129,12 @@
 			path = "Target Support Files/Pods-HWCore_Tests";
 			sourceTree = "<group>";
 		};
-		319493A2019100D5E96406849502A0B4 /* HWCore */ = {
+		3D3D6955D0538F2D2A94360E546CFB51 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7170D12B606F6DB21E8DF968E20DC110 /* _22.h */,
-				DFD211273D220492D0C800D5198843D8 /* Goods.h */,
-				547A2CC0A4F24384971DFFF782AB1906 /* PreHeader.h */,
-				63D45BF8EB6B5CA4280F4FBFC5338FDA /* ReplaceMe.m */,
-				2BB5443D5B33FAF4136374F956ECC6AF /* testPreheader.h */,
-				4B1C88478308E897F658ECEDD981AC52 /* TestViewController.h */,
-				FFA4274ECAD56D745233ED2DB5F7DB8A /* TestViewController.m */,
-				B490C4A595BBDB533F1500E59F27CA08 /* Frameworks */,
-				88D72E8631466E3CEC7EC40632DEC451 /* Pod */,
-				9CC27A6045E55102C3FE13F2809A9B27 /* Support Files */,
+				CE918D9926255CA9E5088F1022C16063 /* HWCore */,
 			);
-			name = HWCore;
-			path = ../..;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
@@ -159,23 +145,37 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		757516B8E67C48BCA4AC3DF6E143DF71 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7A95A60A23E4B9B065E168C79B97E4F /* HWCore.modulemap */,
+				BB8BA83816A32CAA7BC26BECBEC1CD2E /* HWCore.xcconfig */,
+				9DF9DE619B64C5B734DD7AD258C47D8C /* HWCore-dummy.m */,
+				D0E080373D562CC15CB75A0BE7D8925C /* HWCore-prefix.pch */,
+				D6F70372E416B21C51C8B5AAB2A72B0D /* HWCore-umbrella.h */,
+				3B5964BA130CF3F57DE1AD9109477690 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HWCore";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				E30511548F499BEC89658775BDADF7F3 /* Development Pods */,
+				3D3D6955D0538F2D2A94360E546CFB51 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				D98A7D83494CAA0004DF783BDC83A8C2 /* Products */,
 				9571DEAE3F3629BA99B9298D93A6FAC2 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		88D72E8631466E3CEC7EC40632DEC451 /* Pod */ = {
+		8A8FA0AC7C6FA493F146E30546132FF7 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				197DF13F2019410B0EF525BB66AF66FC /* HWCore.podspec */,
-				87A2379DA00B4FBD516EFDD9FA4BC009 /* LICENSE */,
-				CCBDE476665D2B34543B349DE8B8B520 /* README.md */,
+				880B095E1EBCA7A1FDD6D6831B2292A1 /* HWCore.podspec */,
+				BA8E972E17CB75D2967083649EB33B47 /* LICENSE */,
+				141AFC9191718CECFE8B6C1623F451FD /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -207,24 +207,10 @@
 			path = "Target Support Files/Pods-HWCore_Example";
 			sourceTree = "<group>";
 		};
-		9CC27A6045E55102C3FE13F2809A9B27 /* Support Files */ = {
+		9A4B6852B71A2D8BFC8BFA06FA4F12F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C57D576CCB9F399B3C626B9235FC7C51 /* HWCore.modulemap */,
-				31B0E9F17FA9500DC34B3DE28F859175 /* HWCore.xcconfig */,
-				E0A52E389A084D3B8874EF2500DA57E7 /* HWCore-dummy.m */,
-				382E9F902B84079E3814F4AB8D5E0575 /* HWCore-prefix.pch */,
-				E2BAFBBF4C126376F8F7F6FDE90092CF /* HWCore-umbrella.h */,
-				3819222E19943C1E0E4E00E117DD6FF7 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/HWCore";
-			sourceTree = "<group>";
-		};
-		B490C4A595BBDB533F1500E59F27CA08 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1396D4F1242D3D87740C3680024289E7 /* libTest.a */,
+				DF97AB4580FB87D98210A4A14AD2E68C /* libTest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -237,6 +223,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE918D9926255CA9E5088F1022C16063 /* HWCore */ = {
+			isa = PBXGroup;
+			children = (
+				47C94185483BE27A02538E745B8D0006 /* _22.h */,
+				19C852229D9D25B16E94B7EDAAE8CEE2 /* Goods.h */,
+				3B38E8FF0A9BAC0A940722B4010C2203 /* PreHeader.h */,
+				ECF622048501239B664C285DCD3CF0B6 /* ReplaceMe.m */,
+				49F9252141D9E1A62381D5894F483F9F /* testPreheader.h */,
+				9A4B6852B71A2D8BFC8BFA06FA4F12F6 /* Frameworks */,
+				8A8FA0AC7C6FA493F146E30546132FF7 /* Pod */,
+				757516B8E67C48BCA4AC3DF6E143DF71 /* Support Files */,
+			);
+			name = HWCore;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		D98A7D83494CAA0004DF783BDC83A8C2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,14 +247,6 @@
 				6C79A236652F6776007903855558E673 /* Pods_HWCore_Tests.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		E30511548F499BEC89658775BDADF7F3 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				319493A2019100D5E96406849502A0B4 /* HWCore */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,16 +268,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B8FB46A20F732CC320D3C7A1EFA5902E /* Headers */ = {
+		B12862F675150636921FACC9A3B87AAD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C4DF951B4C2D4DD2F70BCE2267AFE43 /* _22.h in Headers */,
-				9CEA4C1F44E1C5E837D87F8F9885DA0E /* Goods.h in Headers */,
-				71353FBB0DC0F4A100E992E6D5883182 /* HWCore-umbrella.h in Headers */,
-				5D7C49A68CED307AC8BE4CDEAE6574C1 /* PreHeader.h in Headers */,
-				C9B03D19D2907539E2567E4EAD2355CD /* testPreheader.h in Headers */,
-				56FF5B7B366A968C6627DF50AA3CC31A /* TestViewController.h in Headers */,
+				BDBFDA93191DD75469009854D6EF49AC /* _22.h in Headers */,
+				70FC53DFBBD9590BE42BFBC4709D22E3 /* Goods.h in Headers */,
+				AB0F7A50789EB698F8B61402C9C62E11 /* HWCore-umbrella.h in Headers */,
+				5349BC2E19B1D54B32439E13AB770589 /* PreHeader.h in Headers */,
+				7577AAA69F8AFB573E41B17AF7486EE8 /* testPreheader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,13 +319,13 @@
 			productReference = 64E1F403E9FA43135C542474C39CFD10 /* Pods_HWCore_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6B1D747CBF9979E26C89CEF2E7875F91 /* HWCore */ = {
+		E223481CA8AF92BE4F5DB908B2F898F3 /* HWCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDB59BC27E3D7CDA2ED7EC0C3C1D3E1A /* Build configuration list for PBXNativeTarget "HWCore" */;
+			buildConfigurationList = 7CB95FE68D3AEAB913195BF3EFFA8A80 /* Build configuration list for PBXNativeTarget "HWCore" */;
 			buildPhases = (
-				E1C70BD0E0AB1B7BC18890B801E95A88 /* Sources */,
-				2063C4579C09FFEECDB62BCB8A9CFD4D /* Frameworks */,
-				B8FB46A20F732CC320D3C7A1EFA5902E /* Headers */,
+				CC0FC5E2C78A5F60DF13DB7D0EE409A9 /* Sources */,
+				DE46A033BD8B57E695F2AF0116CD7F5F /* Frameworks */,
+				B12862F675150636921FACC9A3B87AAD /* Headers */,
 			);
 			buildRules = (
 			);
@@ -364,7 +357,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6B1D747CBF9979E26C89CEF2E7875F91 /* HWCore */,
+				E223481CA8AF92BE4F5DB908B2F898F3 /* HWCore */,
 				3B64D25F4245F9A481DF71DF6D349AA9 /* Pods-HWCore_Example */,
 				1472A4823989D956C739AF44A1B85219 /* Pods-HWCore_Tests */,
 			);
@@ -380,13 +373,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1C70BD0E0AB1B7BC18890B801E95A88 /* Sources */ = {
+		CC0FC5E2C78A5F60DF13DB7D0EE409A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71652760C1C01CEA82EEEDF3D6C36C94 /* HWCore-dummy.m in Sources */,
-				09DDCFDD1CB1779A4EF17CF7364E279C /* ReplaceMe.m in Sources */,
-				4BBA51D8E9C6EF36306ABA8440ED6344 /* TestViewController.m in Sources */,
+				87A969DDB2A2DC57D9329B04B9D2F0EA /* HWCore-dummy.m in Sources */,
+				D9BF63F456C5E0F59609B301FCE95576 /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +402,7 @@
 		FE02383862B8877EF8A9225FBB7CCB3D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HWCore;
-			target = 6B1D747CBF9979E26C89CEF2E7875F91 /* HWCore */;
+			target = E223481CA8AF92BE4F5DB908B2F898F3 /* HWCore */;
 			targetProxy = BB3694837A21AFDB4BFD5B0195749925 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -482,9 +474,9 @@
 			};
 			name = Debug;
 		};
-		51611A7FFAAF0940B6EA95CE5EF12844 /* Debug */ = {
+		4ED4FCE4E1608D69910C9B6D41E4C04F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31B0E9F17FA9500DC34B3DE28F859175 /* HWCore.xcconfig */;
+			baseConfigurationReference = BB8BA83816A32CAA7BC26BECBEC1CD2E /* HWCore.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -507,10 +499,11 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		68AFFACF954F1C968CE1190A1A088472 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -545,6 +538,36 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		7F324FE3D59F1B089A2C856F0AAFFAB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB8BA83816A32CAA7BC26BECBEC1CD2E /* HWCore.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HWCore/HWCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HWCore/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HWCore/HWCore.modulemap";
+				PRODUCT_MODULE_NAME = HWCore;
+				PRODUCT_NAME = HWCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -701,37 +724,6 @@
 			};
 			name = Release;
 		};
-		FFC384574D84B12B1492E0E27395B91B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31B0E9F17FA9500DC34B3DE28F859175 /* HWCore.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HWCore/HWCore-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HWCore/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HWCore/HWCore.modulemap";
-				PRODUCT_MODULE_NAME = HWCore;
-				PRODUCT_NAME = HWCore;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -744,20 +736,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		7CB95FE68D3AEAB913195BF3EFFA8A80 /* Build configuration list for PBXNativeTarget "HWCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F324FE3D59F1B089A2C856F0AAFFAB6 /* Debug */,
+				4ED4FCE4E1608D69910C9B6D41E4C04F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A527C248ECFF39AAA4A95E9B4420B761 /* Build configuration list for PBXNativeTarget "Pods-HWCore_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FE6A1BF24AEEC295547FCA3219905CA /* Debug */,
 				68AFFACF954F1C968CE1190A1A088472 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CDB59BC27E3D7CDA2ED7EC0C3C1D3E1A /* Build configuration list for PBXNativeTarget "HWCore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				51611A7FFAAF0940B6EA95CE5EF12844 /* Debug */,
-				FFC384574D84B12B1492E0E27395B91B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
