@@ -8,5 +8,6 @@
 #ifndef PreHeader_h
 #define PreHeader_h
 
+#import <HWCore/HWAlertController.h>
 
 #endif /* PreHeader_h */

@@ -19,8 +19,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-//    Goods *g = [Goods new];
-//    [g show];
+    UIButton *btn = [[UIButton alloc] initWithFrame:(CGRect){100, 100 ,100, 100}];
+    btn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    //    [g show];
+}
+
+- (void)btnClick {
+    HWAlertController *alertContrller = [HWAlertController HWAlertWithDefaultMessage:@"好的" title:nil message:nil preferredStyle:(UIAlertControllerStyleAlert)];
+    [alertContrller show];
+
 }
 
 - (void)didReceiveMemoryWarning
