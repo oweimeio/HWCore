@@ -25,6 +25,10 @@
     [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
     
     //    [g show];
+    
+    [HWCoreAPI GET:@"" parameters:@{} completionHandler:^(id responseObj, NSError *error) {
+        
+    }];
 }
 
 - (void)btnClick {

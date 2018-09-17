@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "HWCoreAPI.h"
 #import "PreHeader.h"
 #import "HWAlertController.h"
 

@@ -39,5 +39,6 @@ TODO: Add long description of the pod here.
    s.public_header_files = 'HWCore/Classes/**/*.h'
   #s.libraries  = 'lib122.a'
   # s.frameworks = 'lib122.a'
-#  s.dependency 'WechatOpenSDK'
+  s.dependency 'AFNetworking', '~> 3.2.1'
+  s.dependency 'SVProgressHUD', '~> 2.2.5'
 end
