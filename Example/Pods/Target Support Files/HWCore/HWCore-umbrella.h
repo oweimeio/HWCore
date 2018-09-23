@@ -13,6 +13,9 @@
 #import "HWCoreAPI.h"
 #import "PreHeader.h"
 #import "HWAlertController.h"
+#import "HWProgressHUD.h"
+#import "HWUserDefaultsModel.h"
+#import "NSUserDefaultsModel.h"
 
 FOUNDATION_EXPORT double HWCoreVersionNumber;
 FOUNDATION_EXPORT const unsigned char HWCoreVersionString[];

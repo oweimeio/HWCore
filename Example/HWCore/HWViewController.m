@@ -23,17 +23,12 @@
     btn.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    
-    //    [g show];
-    
-    [HWCoreAPI GET:@"" parameters:@{} completionHandler:^(id responseObj, NSError *error) {
         
-    }];
 }
 
 - (void)btnClick {
-    HWAlertController *alertContrller = [HWAlertController HWAlertWithDefaultMessage:@"好的" title:nil message:nil preferredStyle:(UIAlertControllerStyleAlert)];
-    [alertContrller show];
+//    HWAlertController *alertContrller = [HWAlertController HWAlertWithDefaultMessage:@"好的" title:nil message:nil preferredStyle:(UIAlertControllerStyleAlert)];
+//    [alertContrller show];
 
 }
 

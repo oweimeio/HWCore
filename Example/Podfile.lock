@@ -16,7 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - HWCore (0.1.1):
     - AFNetworking (~> 3.2.1)
-    - SVProgressHUD
+    - SVProgressHUD (~> 2.2.5)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
@@ -33,7 +33,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  HWCore: 195b673ad5cc65a245bba4eb723ca6a0f3c6b9d4
+  HWCore: 1ec96c7ed3c32c4c53d85c6920b942aa5bb7bf59
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
 PODFILE CHECKSUM: 8e664fb0870a4beae5db4be27dc290a1810cb636
