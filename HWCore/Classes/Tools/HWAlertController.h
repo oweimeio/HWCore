@@ -10,12 +10,12 @@
 @interface HWAlertController : UIAlertController
 
 /**
- 初始化方法
+ INITIRAL FUNCTION
  */
 + (instancetype)HWAlertWithDefaultMessage:(NSString *)defaultMessage title:(NSString *)title message:(NSString *)message preferredStyle:(UIAlertControllerStyle)preferredStyle;
 
 /**
- 展示方式
+ SHOW STYLE
  */
 - (void)show;
 

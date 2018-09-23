@@ -2,8 +2,7 @@
 //  NSUserDefaultsModel.m
 //  NSUserDefaultsModel
 //
-//  Created by liuchong on 2018/7/19.
-//  Copyright © 2018年 lc. All rights reserved.
+//  Created by apple on 2018/7/19.
 //
 
 #import "NSUserDefaultsModel.h"
@@ -17,7 +16,7 @@
 
 @implementation NSUserDefaultsModel
 
-#pragma mark - Init
+// MARK: - Init
 
 + (instancetype)userDefaultsModel {
     static id model = nil;
@@ -25,7 +24,6 @@
     dispatch_once(&onceToken, ^{
         model = [[[self class] alloc] init];
     });
-    
     return model;
 }
 
@@ -39,16 +37,14 @@
             }
         }
     }
-    
     return self;
 }
 
 - (NSDictionary *)setupDefaultValues {
-    return nil;
+    return @{};
 }
 
-#pragma mark - Processing Data
-
+// MARK: - Processing Data
 - (void)exchangeAccessMethods {
     unsigned int count = 0;
 
@@ -60,6 +56,7 @@
         
         NSString *getterKey = [NSString stringWithFormat:@"%s", propertyName];
         NSString *setterKey = [NSString stringWithFormat:@"set%@%@:", [[getterKey substringToIndex:1] uppercaseString], [getterKey substringFromIndex:1]];
+        
         if (getterKey && getterKey.length > 0) {
             SEL getterSelector = NSSelectorFromString(getterKey);
             SEL setterSelector = NSSelectorFromString(setterKey);
@@ -120,7 +117,7 @@
  * Setter And Getter Methods
  */
 
-// Bbject
+// Object
 static id getObgectValue(NSUserDefaultsModel *model, SEL sel) {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     return [userDefaults objectForKey:model.properties[NSStringFromSelector(sel)]];

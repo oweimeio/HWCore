@@ -31,12 +31,13 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'HWCore/Classes/**/*'
-  s.vendored_libraries = 'HWCore/libTest.{a}'
+  #s.vendored_libraries = ''
+  s.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
   # s.resource_bundles = {
   #   'HWCore' => ['HWCore/Assets/*.png']
   # }
 
-   s.public_header_files = 'HWCore/Classes/**/*.h'
+# s.public_header_files = 'HWCore/Classes/**/*.h'
   #s.libraries  = 'lib122.a'
   # s.frameworks = 'lib122.a'
   s.dependency 'AFNetworking', '~> 3.2.1'

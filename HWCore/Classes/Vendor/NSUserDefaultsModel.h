@@ -2,8 +2,7 @@
 //  NSUserDefaultsModel.h
 //  NSUserDefaultsModel
 //
-//  Created by liuchong on 2018/7/19.
-//  Copyright © 2018年 lc. All rights reserved.
+//  Created by apple on 2018/7/19.
 //
 
 #import <Foundation/Foundation.h>
@@ -20,6 +19,11 @@ typedef NS_ENUM(NSInteger, NSUserDefaultsValueType) {
     NSUserDefaultsValueTypeObject,
     NSUserDefaultsValueTypeUnknown
 };
+
+/**
+ If set yes , when you setValue nil should be return default value
+ */
+@property (nonatomic, assign) BOOL isReturnDefaultValue;
 
 // Init
 + (instancetype)userDefaultsModel;
