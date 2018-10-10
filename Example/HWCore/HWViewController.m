@@ -25,14 +25,15 @@
     [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
     
     //    [g show];
-    
-    [HWCoreAPI GET:@"" parameters:@{} completionHandler:^(id responseObj, NSError *error) {
-        
-    }];
+
 }
 
 - (void)btnClick {
-    HWAlertController *alertContrller = [HWAlertController HWAlertWithDefaultMessage:@"好的" title:nil message:nil preferredStyle:(UIAlertControllerStyleAlert)];
+    HWAlertController *alertContrller = [HWAlertController HWAlertWithTitle:@"1" message:@"2" style:UIAlertControllerStyleActionSheet cancelButtonTitle:@"取222消" cancelButtonBlock:^{
+        
+    } otherButtonTitles:@[@"1", @"2", @"3"] otherButtonsBlock:^(NSInteger index) {
+        NSLog(@"%ld",(long)index);
+    }];
     [alertContrller show];
 
 }
