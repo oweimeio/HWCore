@@ -2,7 +2,7 @@
 //  HWAlertController.m
 //  HWCore
 //
-//  Created by apple on 2018/9/8.
+//  Created by hw on 2018/9/8.
 //
 
 #import "HWAlertController.h"
@@ -17,6 +17,31 @@
     HWAlertController *alertController = [HWAlertController alertControllerWithTitle:title message:message preferredStyle:preferredStyle];
     UIAlertAction *defaultAlertAction = [UIAlertAction actionWithTitle:defaultMessage style:UIAlertActionStyleCancel handler:nil];
     [alertController addAction:defaultAlertAction];
+    return alertController;
+}
+
++ (instancetype)HWAlertWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertControllerStyle)preferredStyle cancelButtonTitle:(NSString *)cancelButtonTitle cancelButtonBlock:(void (^)(void))cancelBlock otherButtonTitles:(NSArray<NSString *> *)otherButtonTitles otherButtonsBlock:(void (^)(NSInteger index))otherButtonsBlock {
+    HWAlertController *alertController = [HWAlertController alertControllerWithTitle:title message:message preferredStyle:preferredStyle];
+    if (cancelButtonTitle.length > 0 ) {
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelButtonTitle
+                                                               style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                                                                   if (cancelBlock) {
+                                                                       cancelBlock();
+                                                                   }
+                                                               }];
+        [alertController addAction:cancelAction];
+    }
+    
+    for (NSInteger i = 0; i < otherButtonTitles.count; i++) {
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:otherButtonTitles[i]
+                                                              style:UIAlertActionStyleDefault
+                                                            handler:^(UIAlertAction * _Nonnull action) {
+                                                                if (otherButtonsBlock) {
+                                                                    otherButtonsBlock(i);
+                                                                }
+                                                            }];
+        [alertController addAction:otherAction];
+    }
     return alertController;
 }
 
@@ -45,14 +70,5 @@
     return result;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
+
