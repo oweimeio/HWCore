@@ -33,4 +33,9 @@ typedef NS_ENUM(NSInteger, HWNetworkReachabilityStatus) {
 /** 对AFHTTPSessionManager的POST请求方法进行了封装 */
 + (id)POST:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void(^)(id responseObj, NSError *error))complete;
 
++ (void)GetImage:(NSString *)path completionHandler:(void(^)(id responseObj, NSError *error))complete;
+
+//上传图片
++ (NSURLSessionDataTask *)POSTImage:(UIImage *)image
+                           progress:(void (^)(float, float))progress kCompletionHandler;
 @end
