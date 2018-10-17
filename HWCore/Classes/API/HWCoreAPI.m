@@ -27,8 +27,31 @@ static AFHTTPSessionManager *manager = nil;
     dispatch_once(&onceToken, ^{
         manager = [AFHTTPSessionManager manager];
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", @"text/json", @"text/javascript", @"text/plain", nil];
+        
+        AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
+        [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [requestSerializer setValue:@"application/json;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+        //[requestSerializer setValue:[self requestGMTTime:[NSDate date]] forHTTPHeaderField:@"Date"];
+        //[requestSerializer setValue:[self requestGMTTime:[NSDate date] md5] forHTTPHeaderField:@"Authorization"];
+        requestSerializer.timeoutInterval = 15;
+        manager.requestSerializer = requestSerializer;
+        
+        AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
+        securityPolicy.validatesDomainName = NO;
+        securityPolicy.allowInvalidCertificates = YES; 
+        securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+        manager.securityPolicy = securityPolicy;
+        
+        
     });
     return manager;
+}
+
++ (NSString*)requestGMTTime:(NSDate*)date {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+    dateFormatter.dateFormat = @"EEE MMM dd HH:mm:ss yyyy";
+    return [dateFormatter stringFromDate:date];
 }
 
 - (void)startMonitoring {
@@ -57,35 +80,55 @@ static AFHTTPSessionManager *manager = nil;
     [mgr startMonitoring];
 }
 
-+ (id)GET:(NSString *)path parameters:(NSDictionary *)paras completionHandler:(void (^)(id, NSError *))complete {
-    //打印网络请求， DDLog  与  NSLog 功能一样
-    //DDLogVerbose(@"Request Path: %@, params %@", path, paras);
-    return [[self sharedManager] GET:path parameters:paras progress:nil
-                              success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                  complete(responseObject,nil);
-                              } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                  complete(nil,error);
-                              }];
++ (NSString *)getAbsolutePath:(NSString *)path {
+    //PROTOCOL + BASEURL + PORT
+    NSString *baseUrl;
+//    if (DEBUG) {
+//        baseUrl = @"http://101.201.117.151:7772";
+//    }
+//    else {
+        baseUrl = @"https://114.242.115.106:7773";
+//    }
+    return [NSString stringWithFormat:@"%@%@", baseUrl, path];
 }
 
-+ (id)POST:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))complete {
++ (id)GETAbsolutePath:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))completionHandler {
+    return [[self sharedManager] GET:path parameters:params progress:nil
+                             success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                 completionHandler(responseObject,nil);
+                             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                 completionHandler(nil,error);
+                             }];
+}
+
++ (id)GET:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))completionHandler {
+    NSString *absolutePath = [self getAbsolutePath:path];
+    return [self GETAbsolutePath:absolutePath parameters:params completionHandler:completionHandler];
+}
+
++ (id)POSTAbsolutePath:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))completionHandler {
     return [[self sharedManager] POST:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        complete(responseObject,nil);
+        completionHandler(responseObject,nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        complete(nil,error);
+        completionHandler(nil,error);
     }];
 }
 
-+ (void)GetImage:(NSString *)path completionHandler:(void (^)(id, NSError *))complete {
++ (id)POST:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))completionHandler {
+    NSString *absolutePath = [self getAbsolutePath:path];
+    return [self POSTAbsolutePath:absolutePath parameters:params completionHandler:completionHandler];
+}
+
++ (void)GetImage:(NSString *)path completionHandler:(void (^)(id, NSError *))completionHandler {
     if (path.length == 0 || [path isEqualToString:@""] || path == nil) {
         return;
     }
     AFImageDownloader *imgd = [AFImageDownloader defaultInstance];
     [imgd downloadImageForURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:path]] success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull responseObject) {
-        complete(responseObject,nil);
+        completionHandler(responseObject,nil);
         NSLog(@"\n\nREQUEST(DOWNLOAD IMAGE) SUCCESS\n\tURL\t%@\n", request.URL.absoluteString);
     } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
-        complete(nil,error);
+        completionHandler(nil,error);
         NSLog(@"\n\nREQUEST(DOWNLOAD IMAGE) FAILED\n\tURL\t%@\n", request.URL.absoluteString);
     }];
 }

@@ -14,6 +14,7 @@
 //TOOLS
 #import <HWCore/HWAlertController.h>
 #import <HWCore/HWProgressHUD.h>
+#import <HWCore/HWPickerView.h>
 
 //VENDOR
 #import <HWCore/HWUserDefaultsModel.h>

@@ -27,13 +27,15 @@ typedef NS_ENUM(NSInteger, HWNetworkReachabilityStatus) {
 /** 监测网络*/
 - (void)startMonitoring;
 
-/** 对AFHTTPSessionManager的GET请求方法进行了封装 */
-+ (id)GET:(NSString *)path parameters:(NSDictionary *)paras completionHandler:(void (^)(id responseObj,NSError * error))complete;
++ (id)GETAbsolutePath:(NSString *)path parameters:(NSDictionary *)params kCompletionHandler;
 
-/** 对AFHTTPSessionManager的POST请求方法进行了封装 */
-+ (id)POST:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void(^)(id responseObj, NSError *error))complete;
++ (id)POSTAbsolutePath:(NSString *)path parameters:(NSDictionary *)params kCompletionHandler;
 
-+ (void)GetImage:(NSString *)path completionHandler:(void(^)(id responseObj, NSError *error))complete;
++ (id)GET:(NSString *)path parameters:(NSDictionary *)params kCompletionHandler;
+
++ (id)POST:(NSString *)path parameters:(NSDictionary *)params kCompletionHandler;
+
++ (void)GetImage:(NSString *)path kCompletionHandler;
 
 //上传图片
 + (NSURLSessionDataTask *)POSTImage:(UIImage *)image

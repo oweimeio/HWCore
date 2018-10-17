@@ -13,6 +13,7 @@
 #import "HWCoreAPI.h"
 #import "PreHeader.h"
 #import "HWAlertController.h"
+#import "HWPickerView.h"
 #import "HWProgressHUD.h"
 #import "HWUserDefaultsModel.h"
 #import "NSUserDefaultsModel.h"

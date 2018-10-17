@@ -7,7 +7,8 @@
 //
 
 #import "HWViewController.h"
-#import <HWCore/PreHeader.h>
+#import "PreHeader.h"
+//#import <HWCore/PreHeader.h>
 
 @interface HWViewController ()
 
@@ -25,10 +26,44 @@
     [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
     
     //    [g show];
+    
 
 }
 
+- (NSString *)requestTime:(NSDate*)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyyMMddHHmmss"];
+    
+    return [dateFormatter stringFromDate:date];
+}
+
 - (void)btnClick {
+    
+    NSDictionary *params = @{@"Request":@{
+                                     @"head":@{@"reqtime":[self requestTime:[NSDate date]],
+                                               @"useragent":@"iPhone;iPhone;11.4.1;640*1136;1.0.6"},
+                                     @"body":@{ @"mobilenum": @"13100000003",
+                                                @"type":@"1",
+                                                @"userpasswd":@"00000000"
+                                                }
+                                     }
+                             };
+    
+    [HWCoreAPI GET:@"/ClientAuth" parameters:params completionHandler:^(id responseObj, NSError *error) {
+        if (error) {
+            return;
+        }
+        NSLog(@"%@", responseObj);
+    }];
+    [HWCoreAPI POSTAbsolutePath:@"https://www.baidu.com" parameters:nil completionHandler:^(id responseObj, NSError *error) {
+        if (error) {
+            return;
+        }
+        NSLog(@"%@", responseObj);
+    }];
+    return;
+    
     HWAlertController *alertContrller = [HWAlertController HWAlertWithTitle:@"1" message:@"2" style:UIAlertControllerStyleActionSheet cancelButtonTitle:@"取222消" cancelButtonBlock:^{
         
     } otherButtonTitles:@[@"1", @"2", @"3"] otherButtonsBlock:^(NSInteger index) {
