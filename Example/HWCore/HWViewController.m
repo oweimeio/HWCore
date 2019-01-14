@@ -39,24 +39,32 @@
 }
 
 - (void)btnClick {
-    
+
+//    NSDictionary *params = @{@"Request":@{
+//                                     @"head":@{@"reqtime":[self requestTime:[NSDate date]],
+//                                               @"useragent":@"iPhone;iPhone;11.4.1;640*1136;1.0.6"},
+//                                     @"body":@{ @"loginName": @"13100000003",
+//                                                @"appType":@"1",
+//                                                @"userpasswd":@"dd4b21e9ef71e1291183a46b913ae6f2",
+//                                                @"codeKey" : @"f4f294c2-3ad7-4774-833e-3a5e41a44798",
+//                                                @"completeCode":@"49B377CD78563851BCCF05C817BE9D9B",
+//                                                @"countrycode":@"+86",
+//                                                @"type":@"1",
+//                                                @"version":@"1.0.6"
+//                                                }
+//                                     }
+//                             };
     NSDictionary *params = @{@"Request":@{
                                      @"head":@{@"reqtime":[self requestTime:[NSDate date]],
                                                @"useragent":@"iPhone;iPhone;11.4.1;640*1136;1.0.6"},
-                                     @"body":@{ @"mobilenum": @"13100000003",
-                                                @"type":@"1",
-                                                @"userpasswd":@"00000000"
+                                     @"body":@{ @"userAccounts": @[@"tr13120253899"],
+                                                @"type":@"2",
+                                                @"account":@"tr3478"
                                                 }
                                      }
                              };
     
-    [HWCoreAPI GET:@"/ClientAuth" parameters:params completionHandler:^(id responseObj, NSError *error) {
-        if (error) {
-            return;
-        }
-        NSLog(@"%@", responseObj);
-    }];
-    [HWCoreAPI POSTAbsolutePath:@"https://www.baidu.com" parameters:nil completionHandler:^(id responseObj, NSError *error) {
+    [[HWCoreAPI sharedAPI] POST:@"/GetVOIPUserInfo" parameters:params completionHandler:^(id responseObj, NSError *error) {
         if (error) {
             return;
         }

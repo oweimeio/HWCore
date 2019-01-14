@@ -40,4 +40,5 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'lib122.a'
   s.dependency 'AFNetworking', '~> 3.2.1'
   s.dependency 'SVProgressHUD', '~> 2.2.5'
+  s.dependency 'FCFileManager'
 end

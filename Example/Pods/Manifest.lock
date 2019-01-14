@@ -14,8 +14,10 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - FCFileManager (1.0.20)
   - HWCore (0.1.1):
     - AFNetworking (~> 3.2.1)
+    - FCFileManager
     - SVProgressHUD (~> 2.2.5)
   - SVProgressHUD (2.2.5)
 
@@ -25,6 +27,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - FCFileManager
     - SVProgressHUD
 
 EXTERNAL SOURCES:
@@ -33,7 +36,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  HWCore: bf30e71983db302dbe0e8010e87c11a57a6fca4b
+  FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
+  HWCore: f32feb55056c2d33ed36cb639002569986e6579a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
 PODFILE CHECKSUM: ee0db1a643b1897282a58219124165e78af18e8b

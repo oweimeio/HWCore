@@ -11,6 +11,7 @@
 #endif
 
 #import "HWCoreAPI.h"
+#import "HWCore.h"
 #import "PreHeader.h"
 #import "HWAlertController.h"
 #import "HWPickerView.h"

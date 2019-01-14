@@ -6,11 +6,19 @@
 //
 
 #import "HWCoreAPI.h"
+#import "HWCore.h"
 #import "AFNetworking.h"
 #import "AFImageDownloader.h"
+#import <CommonCrypto/CommonDigest.h>
 
 static HWCoreAPI *api = nil;
 static AFHTTPSessionManager *manager = nil;
+
+@interface HWCoreAPI ()
+
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
+
+@end
 
 @implementation HWCoreAPI
 
@@ -22,36 +30,40 @@ static AFHTTPSessionManager *manager = nil;
     return api;
 }
 
-+ (AFHTTPSessionManager *)sharedManager {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        manager = [AFHTTPSessionManager manager];
-        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", @"text/json", @"text/javascript", @"text/plain", nil];
-        
-        AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
+- (AFHTTPSessionManager *)manager {
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+        _manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", @"text/json", @"text/javascript", @"text/plain", nil];
+        _manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        AFHTTPRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
         [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
         [requestSerializer setValue:@"application/json;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-        //[requestSerializer setValue:[self requestGMTTime:[NSDate date]] forHTTPHeaderField:@"Date"];
-        //[requestSerializer setValue:[self requestGMTTime:[NSDate date] md5] forHTTPHeaderField:@"Authorization"];
+        NSString *timeStr = [self requestGMTTime:[NSDate date]];
+        [requestSerializer setValue:timeStr forHTTPHeaderField:@"Date"];
+        [requestSerializer setValue:[[self md5:[NSString stringWithFormat:@"%@%@",timeStr,@"tr34622587abc831da4e9183e3e23e6db7149e"]] lowercaseString] forHTTPHeaderField:@"Authorization"];
         requestSerializer.timeoutInterval = 15;
-        manager.requestSerializer = requestSerializer;
+        _manager.requestSerializer = requestSerializer;
         
-        AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
-        securityPolicy.validatesDomainName = NO;
-        securityPolicy.allowInvalidCertificates = YES; 
-        securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
-        manager.securityPolicy = securityPolicy;
-        
-        
-    });
-    return manager;
+        _manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];;
+        _manager.securityPolicy.validatesDomainName = NO;
+        _manager.securityPolicy.allowInvalidCertificates = YES;
+    };
+    return _manager;
 }
 
-+ (NSString*)requestGMTTime:(NSDate*)date {
+- (NSString*)requestGMTTime:(NSDate*)date {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
     dateFormatter.dateFormat = @"EEE MMM dd HH:mm:ss yyyy";
     return [dateFormatter stringFromDate:date];
+}
+
+- (NSString *)md5:(NSString *)str {
+    NSData *utfStr = [str dataUsingEncoding:NSUTF8StringEncoding];
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(utfStr.bytes, (CC_LONG)[utfStr length], result);
+    
+    return [NSString stringWithFormat:@"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X", result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7], result[8], result[9], result[10], result[11], result[12], result[13], result[14], result[15]];
 }
 
 - (void)startMonitoring {
@@ -80,20 +92,20 @@ static AFHTTPSessionManager *manager = nil;
     [mgr startMonitoring];
 }
 
-+ (NSString *)getAbsolutePath:(NSString *)path {
-    //PROTOCOL + BASEURL + PORT
+- (NSString *)getAbsolutePath:(NSString *)path {
+    //BASEURL = SCHEME + DOMAIN + PORT
     NSString *baseUrl;
-//    if (DEBUG) {
-//        baseUrl = @"http://101.201.117.151:7772";
-//    }
-//    else {
-        baseUrl = @"https://114.242.115.106:7773";
-//    }
+    if ([HWCore sharedCore].debug) {
+        baseUrl = [[HWCore sharedCore] valueForConfWithKey:@"baseurl-dev"];
+    }
+    else {
+        baseUrl = [[HWCore sharedCore] valueForConfWithKey:@"baseurl"];
+    }
     return [NSString stringWithFormat:@"%@%@", baseUrl, path];
 }
 
-+ (id)GETAbsolutePath:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))completionHandler {
-    return [[self sharedManager] GET:path parameters:params progress:nil
+- (id)GETAbsolutePath:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))completionHandler {
+    return [[HWCoreAPI sharedAPI].manager GET:path parameters:params progress:nil
                              success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                  completionHandler(responseObject,nil);
                              } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -101,20 +113,20 @@ static AFHTTPSessionManager *manager = nil;
                              }];
 }
 
-+ (id)GET:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))completionHandler {
+- (id)GET:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))completionHandler {
     NSString *absolutePath = [self getAbsolutePath:path];
     return [self GETAbsolutePath:absolutePath parameters:params completionHandler:completionHandler];
 }
 
-+ (id)POSTAbsolutePath:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))completionHandler {
-    return [[self sharedManager] POST:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+- (id)POSTAbsolutePath:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))completionHandler {
+    return [[HWCoreAPI sharedAPI].manager POST:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         completionHandler(responseObject,nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         completionHandler(nil,error);
     }];
 }
 
-+ (id)POST:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))completionHandler {
+- (id)POST:(NSString *)path parameters:(NSDictionary *)params completionHandler:(void (^)(id, NSError *))completionHandler {
     NSString *absolutePath = [self getAbsolutePath:path];
     return [self POSTAbsolutePath:absolutePath parameters:params completionHandler:completionHandler];
 }
@@ -137,7 +149,7 @@ static AFHTTPSessionManager *manager = nil;
     NSString *URLString = @"上传地址";
     NSString *filename = @"filename";
     NSDictionary *param = @{@"name":filename,};
-    NSURLSessionDataTask *dataTask = [[self sharedManager] POST:URLString parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    NSURLSessionDataTask *dataTask = [[HWCoreAPI sharedAPI].manager POST:URLString parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:UIImageJPEGRepresentation(image, 1) name:@"ios" fileName:filename mimeType:@"image/jpeg"];
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         progress(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);
