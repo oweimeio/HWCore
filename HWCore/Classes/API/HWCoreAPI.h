@@ -18,8 +18,14 @@ typedef NS_ENUM(NSInteger, HWNetworkReachabilityStatus) {
 
 @interface HWCoreAPI : NSObject
 
+/**
+ 当前网络状态
+ */
 @property (assign, nonatomic, readonly) HWNetworkReachabilityStatus networkStatus;
 
+/**
+ 是否有网络
+ */
 @property (assign, nonatomic) BOOL isNetworking;
 
 + (instancetype)sharedAPI;
@@ -27,17 +33,17 @@ typedef NS_ENUM(NSInteger, HWNetworkReachabilityStatus) {
 /** 监测网络*/
 - (void)startMonitoring;
 
-+ (id)GETAbsolutePath:(NSString *)path parameters:(NSDictionary *)params kCompletionHandler;
+- (id)GETAbsolutePath:(NSString *)path parameters:(NSDictionary *)params kCompletionHandler;
 
-+ (id)POSTAbsolutePath:(NSString *)path parameters:(NSDictionary *)params kCompletionHandler;
+- (id)POSTAbsolutePath:(NSString *)path parameters:(NSDictionary *)params kCompletionHandler;
 
-+ (id)GET:(NSString *)path parameters:(NSDictionary *)params kCompletionHandler;
+- (id)GET:(NSString *)path parameters:(NSDictionary *)params kCompletionHandler;
 
-+ (id)POST:(NSString *)path parameters:(NSDictionary *)params kCompletionHandler;
+- (id)POST:(NSString *)path parameters:(NSDictionary *)params kCompletionHandler;
 
-+ (void)GetImage:(NSString *)path kCompletionHandler;
+- (void)GetImage:(NSString *)path kCompletionHandler;
 
 //上传图片
-+ (NSURLSessionDataTask *)POSTImage:(UIImage *)image
+- (NSURLSessionDataTask *)POSTImage:(UIImage *)image
                            progress:(void (^)(float, float))progress kCompletionHandler;
 @end

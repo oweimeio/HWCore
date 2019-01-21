@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NetWork</key>
+	<dict>
+		<key>baseurl</key>
+		<string>https://114.242.115.106:7773</string>
+		<key>baseurl-dev</key>
+		<string>http://101.201.117.151:7772</string>
+	</dict>
+</dict>
+</plist>
