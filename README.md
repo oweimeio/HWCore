@@ -22,7 +22,7 @@ pod 'HWCore'
 
 ## Author
 
-oweimeio, huwei@yuntongxun.com
+oweimeio, oweimeio@qq.com
 
 ## License
 
